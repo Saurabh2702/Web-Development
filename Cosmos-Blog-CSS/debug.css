@@ -1,0 +1,11 @@
+body *{
+  color: rgba(66, 159, 172, 0.88) !important;
+  background: rgba(105, 151, 236, 0.33) !important;
+  outline: rgba(104, 216, 231, 0.5) !important;
+}
+
+.debug-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

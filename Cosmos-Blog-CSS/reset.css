@@ -1,0 +1,11 @@
+html>
+body,
+body *{
+  margin: unset;
+  box-sizing:unset;
+  padding:unset;
+  font-size:unset;
+  text-decoration:unset;
+}
+
+figure * { display: block;}
