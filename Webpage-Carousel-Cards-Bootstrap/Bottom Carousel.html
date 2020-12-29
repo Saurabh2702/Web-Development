@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link href="cards.css" rel="stylesheet">
+
+  <title>Bottom Carousel</title>
+
+  <style>
+    #Indicator .carousel-indicators .active{
+		background-color: #202020;
+		}
+	#Indicator .carousel-indicators li {
+			width: 10px;
+			height: 10px;
+			border-radius: 100%;
+			background-color: #808080;
+        }
+	#Indicator .carousel-indicators {
+		bottom:10px;
+		}
+	#Indicator .carousel-inner {
+		margin-bottom:50px;
+		}
+	#Indicator{
+		height:475px;
+		overflow-y:auto;
+		}
+	#Indicator .card{
+		padding-top:20px;
+		border:none;
+		font-family:Montserrat;
+		}
+	#Indicator .name{	
+		color:	#663399;
+		font-weight:800;
+		font-size:23px;
+		}
+	#Indicator .position{	
+		color:#4a4a4a;
+		font-size:20px;
+		font-weight:500;
+		line-height:1.5;
+		}
+	#Indicator .info{	
+		color:#4a4a4a;
+		font-size:16px;
+		font-weight:500;
+		padding-bottom:7px;
+		}
+	#Indicator .testimonial{	
+		color:#A0A0A0;
+		font-size:20px;
+		line-height:1.5;
+		font-weight:500;
+		}	
+	#Indicator .avatar .card-img-top{
+		border-radius:50%;
+		border: solid black 4px;
+		height:80px;
+		width:80px;
+		}
+	#testimonial .col-sm-9{
+		background-color:white;
+		border-radius:5%;
+		box-shadow: 2px 2px 4px #666666;
+		}
+    #bottom-carousel .section-title{
+		padding:20px;
+		padding-bottom:30px;
+        }
+	.page-footer{
+        background-color: #301b92;
+        }
+  </style>
+      
+
+</head>
+
+<body>
+
+	<div class="section">
+        <div class="row" id="bottom-carousel" style="background-color: #d0c4e8;padding:40px;">
+            <div class="container-fluid" style="max-width:70%">
+				<div class="section">
+            
+					<!-- Happy Clients -->
+					<div class="row">
+						<div class="col-sm-12 col-md-12 text-center">
+							<h2 class="section-title" style="font:Bold 35px Montserrat;">Our Happy Clients</h2>
+						</div>
+					</div>
+            
+					<div class="row" id="testimonial">
+						<section class="container d-flex justify-content-center">
+						  <div class="col-sm-9 d-flex justify-content-center">
+							<div class="col-sm-10">
+								<div id="Indicator" class="carousel slide" data-ride="carousel" style="">
+									<ol class="carousel-indicators">
+										<li data-target="#Indicator" data-slide-to="0" class="active"></li>
+										<li data-target="#Indicator" data-slide-to="1"></li>
+										<li data-target="#Indicator" data-slide-to="2"></li>
+									</ol>
+                         
+									<div class="carousel-inner " >
+										<div class="carousel-item active">
+											<!--Card 1-->
+												<div class="col-md-12" >
+													<div class="card" >
+														<div class="avatar mx-auto">
+																<img src="https://pbs.twimg.com/profile_images/1027075618029162496/-VhNwR6t_400x400.jpg" class="card-img-top" >
+														</div>
+
+														<div class="card-body">
+															<h4 class="name text-center">Sumit Chanda</h4>
+															<h3 class="position text-center"> CEO,Jarvis</h3>
+															<p class="info text-center">(India's Artificial Intelligence enabled Equity advisory model)</p>
+															<p class="testimonial text-center">We have been working with Techstalwarts team since the past one year &amp; our experience has been outstanding. They have shown enormous skill with their multi-domain knowledge along with reliable and trustworthy IT expertise. We would recommend Techstalwarts to anyone looking for quality IT services, delivered in a professional manner.</p>
+														</div>
+													</div>
+												</div>
+										</div>
+										<!--Card 2-->
+										<div class="carousel-item">
+											<div class="col-md-12">
+												<div class="card">
+													<div class="avatar mx-auto">
+															<img src="https://media-exp1.licdn.com/dms/image/C5103AQG2o9SG_Siapw/profile-displayphoto-shrink_200_200/0?e=1599091200&amp;v=beta&amp;t=KvN-cbgtlHSeUvGcWn7vCXpABB5C2KVI9KWrOg3jvhY" alt="Dipesh Karki" class="card-img-top" >
+													</div>
+													<div class="card-body">
+															<h4 class="name text-center">Dipesh Karki</h4>
+															<h3 class="position text-center">Founder &amp; CTO at LenDenClub</h3>
+															<p class="info text-center">(More than 5 Million app users)</p>
+															<p class="testimonial text-center">It was a pleasure to work with the Techstalwarts team as they share many values that we follow at LenDenClub such as versatile team, quality product build, rigorous test, vibrant user experience, and the ability to deliver the optimal solution in the expected timeline. Their quality, of honouring the committed terms at any cost, is highly commendable. LenDenClub is proud to have The Techstalwarts as their preferred Technology Partner.</p>
+													</div>
+												</div>
+											</div>
+										</div>
+            
+										<!--Card 3-->
+										<div class="carousel-item">
+											<div class="col-md-12">
+												<div class="card">
+													<div class="avatar mx-auto">
+															<img src="https://media-exp1.licdn.com/dms/image/C4D03AQEkhwwOYWxxNw/profile-displayphoto-shrink_200_200/0?e=1601510400&amp;v=beta&amp;t=SRWhEFjH2mupiF1lXEdHei6H_i825W8uEsTBZ1wqOUY" alt="Ravi Kiran" class="card-img-top">
+													</div>
+													<div class="card-body">
+															<h4 class="name text-center">Ravi Kiran</h4>
+															<h3 class="position text-center">Co-founder, Helpie</h3>
+															<p class="info text-center"></p>
+															<p class="testimonial text-center">We are delighted to work with team TechStalwarts. The collaboration goes far beyond a standard IT service: with TechStalwarts. They are truly passionate about the results developed. The level of professionalism and dedication is exceptional in this industry, and we are eager to strengthen our collaboration in the future</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+             					</div>
+							</div>
+						  </div>
+						</section>
+					</div>
+				</div>
+            </div>
+        </div>
+    </div>
+              
+	
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+ 
+<footer class="page-footer font-small">
+    <div class="footer-copyright text-center py-3 text-white">Copyright © 2020 techstalwarts.com  All Rights Reserved.</div>
+</footer>
+
+
+    </body>
+</html>

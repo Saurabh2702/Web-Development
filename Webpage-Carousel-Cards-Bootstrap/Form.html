@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- Required meta tags -->
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+   
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+   <title>Document</title>
+   
+   <style>
+		#Technology .dropdown-toggle{
+			width:100%;
+			text-align:left;
+			border-width:0px 0px 2px 0px;
+			border-color:grey;
+		}
+		#Technology{
+			width:87%;
+		}
+		#Technology .dropdown-menu{
+			width:100%;
+		}
+		.form-control{
+			border-width:0px 0px 2px 0px;
+			border-color:#9e9e9e;
+			font-size:25px;
+		}
+		.form-control:focus {
+			 box-shadow: none;
+		}
+		label{
+			font-size:20px;
+			color:#9e9e9e;
+			padding-left:3%;
+			padding-bottom:5px;
+		}
+		#USA .btn{
+			border-radius:5%;
+		}
+		#NameInp label,#EmailInp Label{ 
+			position:absolute;
+			top:10px;
+			left:50px;
+			transition:all .3s;
+			pointer-events:none;
+		}
+		
+		#NumberInp label{
+			position:absolute;
+			top:10px;
+			left:150px;
+			transition:.3s;
+			pointer-events:none;
+		}
+		
+		.form-text{
+			padding-top:10px;
+			padding-left:80px;
+			font-size:14px;
+		}
+   </style>
+
+</head>
+<body>
+	<div class="container col-sm-8">
+		<div class="row">
+			<div>
+				<h2 style="color: navy; padding:50px 0px 40px 20px;"> Let's Build Your Idea</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-10">
+			<form id="TechForm" >
+				<div class="form-group my-5">
+					<div class="input-group" id="NameInp">
+						<div class="input-group-prepend mx-3">
+							<span class="input-group-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTuMj5Jt7LQ0OQSdpmi02mQyidiU5qLDV0o6g&usqp=CAU" alt="User" height="42" width="42"></span>
+						</div>
+						<input onchange="validateName()" type="text" class="form-control" id="Name" ></input>
+						<label for="Name">Hello, My name is,</label>
+					</div>
+					<small class="form-text" id="ErrorName"></small>
+				</div>
+				<div class="form-group my-5">
+					<div class="input-group" id="NumberInp">
+						<div class="input-group-prepend mx-3">
+							<span class="input-group-img"><img src="https://cdn4.iconfinder.com/data/icons/browser-ui-small-size-optimized-set/154/phone-call-dial-online-operation-512.png" alt="Phone" height="42" width="42"></span>
+							<button class="btn btn-outline-secondary dropdown-toggle" id="USA" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">USA (+1)</button>
+								<div class="dropdown-menu">
+									<a class="dropdown-item" href="#"><img alt="US" src="USA.png" height="40" width="40"> USA (+1)</img></a>
+								</div>
+						</div>
+						<input onchange="validateNumber()" type="text" class="form-control" id="Number"></input>
+						<label for="Number">I can be reached via this number,</label>
+					</div>
+					<small class="form-text" id="ErrorNumber"></small>
+				</div> 
+				<div class="form-group my-5">
+					<div class="input-group" id="EmailInp">
+						<div class="input-group-prepend mx-3">
+							<span class="input-group-img"><img src="https://www.netclipart.com/pp/m/34-349926_28-collection-of-mail-clipart-png-mail-icon.png" alt="Email" height="42" width="42"></span>
+						</div>
+						<input onchange="validateEmail()" type="email" class="form-control" id="EMail" ></input>
+						<label for="EMail">I can be reached via email at,</label>
+					</div>
+					<small class="form-text" id="ErrorEmail"></small>
+				</div>
+				<div class="form-group my-5">
+					<label for="Technology mx-5">What are you Looking For</label>
+						<div class="input-group">
+							<div class="input-group-prepend mx-3">
+								<span class="input-group-img"><img src="https://www.iconninja.com/files/34/806/553/banking-icon.png" alt="Tech" height="42" width="42"></span>
+							</div>
+							<div class="dropdown" onchange="validateCheckBoxes()" id="Technology" required>
+								<button class="btn dropdown-toggle" id="Selection" type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									Select
+								</button >
+								<div class="dropdown-menu" id="Menu" aria-labelledby="dropdownMenuButton">
+									<div class="form-check">
+										<input type="checkbox" value="UI/UX Service" id="defaultCheck1">
+										<label for="defaultCheck1">
+											UI/UX Service
+										</label>
+									</div>
+									<div class="form-check">
+										<input type="checkbox" value="Web Development" id="defaultCheck2">
+										<label for="defaultCheck2">
+											Web Development
+										</label>
+									</div>
+									<div class="form-check">
+										<input type="checkbox" value="Platform Development" id="defaultCheck3">
+										<label for="defaultCheck3">
+											Platform Development
+										</label>
+									</div>
+									<div class="form-check">
+										<input type="checkbox" value="Quality Assurance" id="defaultCheck4">
+										<label for="defaultCheck4">
+											Quality Assurance
+										</label>
+									</div>
+									<div class="form-check">
+										<input type="checkbox" value="Tech Consultancy" id="defaultCheck5">
+										<label for="defaultCheck5">
+											Tech Consultancy
+										</label>
+									</div>
+									<div class="form-check">
+										<input type="checkbox" value="Cloud Computing" id="defaultCheck6">
+										<label for="defaultCheck6">
+											Cloud Computing
+										</label>
+									</div>
+									<div class="form-check">
+										<input type="checkbox" value="Outsourced Product Developemnt" id="defaultCheck7">
+										<label for="defaultCheck7">
+											Outsourced Product Developemnt
+										</label>
+									</div>
+									<div class="form-check">
+										<input type="checkbox" value="Digital Marketing" id="defaultCheck8">
+										<label for="defaultCheck8">
+											Digital Marketing
+										</label>
+									</div>
+									<div class="form-check">
+										<input type="checkbox" value="Blockchain Developement" id="defaultCheck9">
+										<label for="defaultCheck9">
+											Blockchain Developement
+										</label>
+									</div>
+									<div class="form-check">
+										<input type="checkbox" value="Bussiness Intelligence Technology" id="defaultCheck10">
+										<label for="defaultCheck10">
+											Bussiness Intelligence Technology
+										</label>
+									</div>
+									<div class="form-check">
+										<input type="checkbox" value="Artificial Intelligence and Technolog" id="defaultCheck11">
+										<label for="defaultCheck11">
+											Artificial Intelligence and Technology
+									</div>
+								</div>
+							</div>
+							<small class="form-text" id="ErrorCheck"></small>
+						</div>
+				</div>
+				<div class="row mx-3" style="padding-left:40%;padding-top:5%" >
+					<button onclick="return CheckAll()" class="btn btn-primary btn-lg" type="submit" style="background-image: linear-gradient(to right,#6566f4,#604bd8,#5d39bf,#5b29ac,#5a1d9f); border: 0;"> Submit </button>
+				</div>
+				
+			</form>
+			</div>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<script>
+		
+	
+		function stateCheck1($formControl){
+			if($formControl.val().length>0)
+			{
+				$('#NumberInp label').css({"top":"-35px","left":"120px","font-size":"16px"});
+			}
+			else{
+				$('#NumberInp label').css({"top":"10px","left":"150px","font-size":"20px"});
+			}
+		}
+		function stateCheck2($formControl){
+			if($formControl.val().length>0)
+			{
+				$('#NameInp label').css({"top":"-35px","left":"30px","font-size":"16px"});
+			}
+			else{
+				$('#NameInp label').css({"top":"10px","left":"50px","font-size":"20px"});
+			}
+		}
+		function stateCheck3($formControl){
+			if($formControl.val().length>0)
+			{
+				$('#EmailInp label').css({"top":"-35px","left":"30px","font-size":"16px"});
+			}
+			else{
+				$('#EmailInp label').css({"top":"10px","left":"50px","font-size":"20px"});
+			}
+		}
+		
+		
+		$(document).ready(function(){
+			$('#NumberInp input').on('focusout',function(){
+				stateCheck1($(this));
+				});	
+			$('#NumberInp input').on('focus',function(){
+				$('#NumberInp label').css({"top":"-35px","left":"120px","font-size":"16px"});
+				});
+			$('#NameInp input').on('focusout',function(){
+				stateCheck2($(this));
+				});
+			$('#NameInp input').on('focus',function(){
+				$('#NameInp label').css({"top":"-35px","left":"30px","font-size":"16px"});
+				});
+			$('#EmailInp input').on('focusout',function(){
+				stateCheck3($(this));
+				});
+			$('#EmailInp input').on('focus',function(){
+				$('#EmailInp label').css({"top":"-35px","left":"30px","font-size":"16px"});
+				});
+		})
+	</script>
+	<script>
+		
+		    function validateName() {
+				  var name = document.getElementById("Name").value;
+				  if (name.trim() == "") {
+					document.getElementById("ErrorName").innerHTML ="<span style='color:black;background-color:#ff0000;padding:4px;border-radius:4px'><strong>Please Enter Your Name</strong></span>";
+					document.getElementById("Name").style.borderColor="#ff0000";
+					return false;
+				  }
+				  else if(((name.length<=2)||(name.length>=20))||(!isNaN(name))){
+					document.getElementById("ErrorName").innerHTML ="<span style='color:black;background-color:#FFA500;padding:4px;border-radius:4px'><strong>Please Enter A Valid Name</strong></span>";
+					document.getElementById("Name").style.borderColor="#FFA500";
+					return false;
+				  }
+				  else{
+					document.getElementById("ErrorName").innerHTML ="";
+					document.getElementById("Name").style.borderColor="#00e600";
+					return true;
+				  }
+			 
+			}
+			function validateNumber() {
+				var number= document.getElementById("Number").value;
+				if (number.trim() == "") {
+					document.getElementById("ErrorNumber").innerHTML ="<span style='color:black;background-color:#ff0000;padding:4px;border-radius:4px'><strong>Please Enter Your Number</strong></span>";
+					document.getElementById("Number").style.borderColor="#ff0000";
+					document.getElementById("USA").style.borderColor="#ff0000";
+					return false;
+				  }
+				  else if((isNaN(number)) || (number.length!=10)) {
+					 document.getElementById("ErrorNumber").innerHTML="<span style='color:black;background-color:#FFA500;padding:4px;border-radius:4px'><strong>Please Enter A Valid Number</strong></span>";
+					 document.getElementById("Number").style.borderColor="#FFA500";
+					 document.getElementById("USA").style.borderColor="#FFA500";
+					 return false;
+				  }
+				  else{
+					document.getElementById("ErrorNumber").innerHTML ="";
+					document.getElementById("Number").style.borderColor="#00e600";
+					document.getElementById("USA").style.borderColor="#00e600";
+					return true;
+				  }
+			}
+			function validateEmail() {
+				var email= document.getElementById("EMail").value;
+				var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+				  if (email.trim() == "") {
+					document.getElementById("ErrorEmail").innerHTML ="<span style='color:black;background-color:#ff0000;padding:4px;border-radius:4px'><strong>Please Enter Your Email</strong></span>";
+					document.getElementById("EMail").style.borderColor="#ff0000";
+					return false;
+				  }
+				  else if(reg.test(email)==false){
+					document.getElementById("ErrorEmail").innerHTML ="<span style='color:black;background-color:#FFA500;padding:4px;border-radius:4px'><strong>Please Enter A Valid Email</strong></span>";
+					document.getElementById("EMail").style.borderColor="#FFA500";
+					return false;
+				  }
+				  else{
+					document.getElementById("ErrorEmail").innerHTML ="";
+					document.getElementById("EMail").style.borderColor="#00e600";
+					return true;
+				  }
+			}
+			function validateCheckBoxes(){
+					  var service=document.getElementById("Selection").innerText;
+					  if(service.trim()=='Select'){
+						  document.getElementById("ErrorCheck").innerHTML ="<span style='color:black;background-color:#ff0000;padding:4px;border-radius:4px'><strong>Please Select a Service</strong></span>";
+						  $('#Technology .dropdown-toggle').css({"border-color":"#ff0000"});
+						  return false;
+					  }
+					  else{
+						  document.getElementById("ErrorCheck").innerHTML ="";
+						  $('#Technology .dropdown-toggle').css({"border-color":"#00e600"});
+						  return true;
+					  }
+			   }
+			function CheckAll(){
+				var x= validateName()&&validateNumber()&&validateEmail()&&validateCheckBoxes();
+				console.log(x);
+				return x;
+			}
+			
+	</script>
+	<script>
+			var x="";
+		    var cbs = document.querySelectorAll('input[type=checkbox]');
+			for(var i = 0; i < cbs.length; i++) {
+					cbs[i].addEventListener('change', function() {
+						if(this.checked) {
+							x=x+this.value+" ";
+						    $(this).parents(".dropdown").find('.btn').html(x);
+							}
+					});
+				}
+	</script>
+	
+</body>
+</html>
